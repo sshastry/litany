@@ -1,4 +1,3 @@
-
 # Litany
 
 Literate programming in any language.
@@ -49,16 +48,15 @@ extracts a markdown file with the code blocks being bounded by triple backticks,
 This shows how the .lit file serves as an archive:
 ```
 $ litany -e hsjs.lit
-✓    2 "haskell/a.hs"
-✓    2 "javascript/a.js"
+✓    2 haskell/a.hs
+✓    2 javascript/a.js
 ```
 
-The `-e` option extracts the files embedded in the blocks. Note that we can pause and continue the blocks, thus intermingling the code from different files in our literate file, but those files will be extracted to the right place by `-e`. Use both options `-m` and `-e` to extract from the archive and produce the markdown file simultaneously.
+The `-e` option extracts the files embedded in the blocks. Note that we can pause and continue the blocks, thus intermingling the code from different files in our .lit file, but those blocks will be extracted to appropriate file. Use both options `-m` and `-e` to extract from the archive and produce the markdown file simultaneously.
 
 Finally, we can include a code block in the .lit file which is not intended to be extracted with `-e`, but which will appear in the markdown output. Simply omit a filename from such a block, as shown in the last block in hsjs.lit.
 
 I found litany particularly useful when working on web apps, what with the constant switching and interweaved logic between model, view, and template files. In fact, work on a web app is what inspired litany in the first place.
 
-# Installation
+## Installation
 * `$ ghc -o litany Main.hs`
-
