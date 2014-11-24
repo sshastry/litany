@@ -56,7 +56,7 @@ The `-e` option extracts the files embedded in the blocks. Note that we can paus
 
 Finally, we can include a code block in the .lit file which is not intended to be extracted with `-e`, but which will appear in the markdown output. Simply omit a filename from such a block, as shown in the last block in hsjs.lit.
 
-I found litany particularly useful when working on web apps, what with the constant switching and interweaved logic between model, view, and template files. In fact, work on a web app is what inspired litany in the first place.
+Litany was inspired by work on a web app, the idea being that it would be nice to document the logic of the models, views, and templates all in one file, and also have that file be the archive for the code itself.
 
 ## Installation
 * `$ ghc -o litany Main.hs`
